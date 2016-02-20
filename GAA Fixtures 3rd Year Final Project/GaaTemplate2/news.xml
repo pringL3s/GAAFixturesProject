@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<theNews>
+  <news>
+    <title>IT SLIGO CHAMPIONSHIPS</title>
+    <contents>IT SLIGO WON</contents>
+    <time>15 March 2013 22:01</time>
+  </news>
+  <news>
+    <title>Great News</title>
+    <contents>Great Stuff</contents>
+    <time>15 March 2013 15:40</time>
+  </news>
+  <news>
+    <title>test</title>
+    <contents>vaiunvoa</contents>
+    <time>27 February 2013 14:42</time>
+  </news>
+  <news>
+    <title>DONEGAL WON</title>
+    <contents>after 20 years of waiting they finally won again</contents>
+    <time>27 February 2013 00:54</time>
+  </news>
+  <news>
+    <title>Xml</title>
+    <contents>Xml</contents>
+    <time>26 February 2013 16:08</time>
+  </news>
+  <news>
+    <title>My news</title>
+    <contents>This is my news</contents>
+    <time>26 February 2013 15:42</time>
+  </news>
+</theNews>

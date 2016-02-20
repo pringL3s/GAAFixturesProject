@@ -1,0 +1,343 @@
+﻿body 
+{
+    
+    color:#fff;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    height:110%;
+    
+   background: -webkit-linear-gradient(top, #0c4987, #43aad0);
+-webkit-box-shadow:-9px 15px 16px -5px #09417a;
+   
+}
+padding
+{
+   padding:60px; 
+}
+h2
+{
+    font-size:30;
+    
+}
+h3 a
+{
+   color:White; 
+   text-decoration:none;
+}
+
+h3 a:hover
+{
+    color:#43aad0;
+    font-size:larger;
+    
+}
+hr
+{
+    width:80%;
+    height:1px;
+    border:none;
+    color:#09417a;
+    background-color:#09417a;
+}
+
+
+.textStyle
+{
+    font-family:Arial;
+    font-size:15px;
+    color:#fff;
+}
+
+/***Table on New Message page ***/
+.table
+{
+     background: #0c4987;
+
+}
+.LoginSignUpHyperLink
+{
+  float:right;
+  color:#fff;
+  position:relative;
+  margin-top:-45px; 
+ 
+  
+  width:auto;
+  font-size:10px;
+}
+
+/* Label */
+.lbl
+{
+    background-color: White;
+    font-size:medium;
+}
+
+
+/*** Button **/
+.btn
+{
+    height:25px;
+    font-size:15px;
+    border-radius:10px;
+    text-align:center;
+    color:#0c4987;
+    margin-left:2px;
+    
+    background-color:#40a7cf;
+    border:0px;
+}
+.btn:hover 
+{
+    color:#fff;
+}
+
+/*** containers **/
+#mainContainer
+{
+   
+   margin-bottom: 5px;
+
+   background-color:#43aad0;
+   min-height:900px;  
+    
+   width:800px;
+   border-bottom-left-radius:10px;
+   border-bottom-right-radius:10px;
+   background: -webkit-radial-gradient(circle, #0c4987, #43aad0);
+   
+}
+
+/** Content**/
+
+#AdminContent
+{
+   float:left;
+   margin-top:5px;
+   padding-left:10px;
+   padding-right:5px;
+   background-color:#175d97;
+   margin-bottom: 5px;
+   min-height:750px;
+   width:90%; 
+}
+
+
+
+#mainContent
+{
+   float:left;
+   margin-top:5px;
+   padding-left:5px;
+   background-color:#175d97;
+   width:548px;
+   min-height:750px;   
+    -webkit-box-shadow:-9px 15px 16px -5px #09417a;
+
+}
+
+
+#rightContent
+{
+    float:right;
+    margin-top:5px;
+    
+    padding-left:5px;
+    width:220px;
+    height:400px;
+    background-color:#175d97;
+     -webkit-box-shadow:-9px 15px 16px -5px #09417a;
+
+    
+}
+
+#bottomContent
+{
+    float:right;
+    margin-top:20px;
+    
+    padding-left:5px;
+    width:220px;
+    height:150px;
+    background-color:#175d97;
+    -webkit-box-shadow:-9px 15px 16px -5px #09417a;
+ 
+}
+#BottomContents
+{
+   
+    padding:10px;
+    height: 58px;
+     
+}
+#BottomContents.td
+{
+    
+    margin-left:10px;
+    margin-bottom:10px;
+}
+#welcome
+{
+    padding-left:10px;
+    padding-right:10px;
+ 
+}
+#txtContents
+{
+    height:200px;
+    width:80%;
+
+}
+
+/*** Header ***/
+#header
+{
+    background-image:url:("header.png");
+    
+}
+.headings
+{
+    display:block;
+    background-color:#0b4887;
+    width:200px;
+    margin-left:-15px;
+    margin-top:10px;
+    color:#fff;
+    font-size:25px;
+    font-weight:bold;
+    height:30px;
+    padding:10px;
+   
+    
+    -webkit-box-shadow:-6px 15px 16px -6px #09417a;
+    padding-left:15px;
+}
+.lables
+{
+    position:absolute;
+    margin-top:200%;
+    
+}
+#logo
+{
+    width:800px;
+    overflow:hidden;
+}
+
+
+/******  Nav ******/
+#nav 
+{
+    float:right;
+    margin-top:-50px;
+  margin-right:230px;
+   
+    display:block;
+	position:relative;
+	font-size:16px;
+	
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    
+    list-style-type: none;
+    text-align: center;
+    color: #43aad0;
+    
+}
+
+#nav ul li {display: inline;}
+#nav ul li a 
+{
+    border-width:thin;
+   border-style:solid ;
+   border-color:#09417a;
+   border-left:.2px;
+   border-top:0px;
+   border-bottom:0px;
+    text-decoration: none;
+    padding: .2em 1em;
+    color: #fff;
+   
+}
+
+#nav ul li a:hover {
+    /*color:#0c4987;*/
+    color:#fff;
+     background-color: #43aad0;
+     /*background: -webkit-linear-gradient(top,#185f98 ,#196098 ); */
+    border-radius: 50px;
+}
+#nav ul li a:active {
+    color: #fff;
+     background-color: #43aad0;
+     border-radius: 50px;
+}
+#nav ul li a:visted{
+    color: #fff;
+     background-color: #43aad0;
+     border-radius: 50px;
+}
+
+/**** Table ***/
+
+#signUpTable
+{
+    width: 91%;
+    font-size:20px;
+    border-bottom:1px none #fff;
+    margin-right: 77px;
+}
+#signUpTable td
+{
+ height:40px;
+}
+
+
+/** Forum Content***/
+#forumContent
+{
+   float:left;
+   margin-top:5px;
+   
+   background-color:#175d97;
+   margin-bottom: 5px;
+   
+   min-height:750px;
+   width:90%; /* or 90*/
+    
+     
+  
+}
+
+#forumBottomContent
+{
+    direction:rtl;
+    float:right;
+    position:absolute;
+    top: 682px;
+    right: 112px;
+}
+
+/**players Table*****/
+#playersTable .tr
+{
+    background:"red";
+    
+}
+
+/** footer***/
+#footer
+{float : right;}
+
+#gallary
+{
+    width:540px;
+    height:300px;
+    background-color:Blue;
+    
+    
+}

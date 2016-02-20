@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GAAFixtures" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.TeamTbl" Member="TeamTbls">
+    <Type Name="TeamTbl">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClubID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TeamMngr" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TeamTbl_LeagueTbl" Member="LeagueTbls" ThisKey="TeamID" OtherKey="TeamID" Type="LeagueTbl" />
+      <Association Name="ClubTbl_TeamTbl" Member="ClubTbl" ThisKey="ClubID" OtherKey="ClubID" Type="ClubTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTbl" Member="UserTbls">
+    <Type Name="UserTbl">
+      <Column Name="RegID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdminCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompetitionTbl" Member="CompetitionTbls">
+    <Type Name="CompetitionTbl">
+      <Column Name="CompetitionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CompName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompDescription" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ForumTbl" Member="ForumTbls">
+    <Type Name="ForumTbl">
+      <Column Name="ForumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ArticleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Indent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserProfile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CommentType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClubTbl" Member="ClubTbls">
+    <Type Name="ClubTbl">
+      <Column Name="ClubID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClubName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClubPitch" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClubSec" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ClubTbl_TeamTbl" Member="TeamTbls" ThisKey="ClubID" OtherKey="ClubID" Type="TeamTbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FixturesMatchesTbl" Member="FixturesMatchesTbls">
+    <Type Name="FixturesMatchesTbl">
+      <Column Name="FixtureID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompetitionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Team1ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Team2ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ScoreTeam1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ScoreTeam2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Goal1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Goal2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Points1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Points2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="LeagueTbl_FixturesMatchesTbl" Member="LeagueTbl" ThisKey="LeagueID" OtherKey="LeagueID" Type="LeagueTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LeagueTbl" Member="LeagueTbls">
+    <Type Name="LeagueTbl">
+      <Column Name="LeagueID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LeagueType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChoosenTeams" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="PlayedGames" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Won" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Draw" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Lost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PtsFor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PtsAgainst" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PtsGoalDiff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RankingPosition" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LeagueTbl_FixturesMatchesTbl" Member="FixturesMatchesTbls" ThisKey="LeagueID" OtherKey="LeagueID" Type="FixturesMatchesTbl" />
+      <Association Name="TeamTbl_LeagueTbl" Member="TeamTbl" ThisKey="TeamID" OtherKey="TeamID" Type="TeamTbl" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
